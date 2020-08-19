@@ -16,18 +16,22 @@ public class BuildSystem : MonoBehaviour
 
     private bool isBuilding = false;
 
+    private void Start()
+    {
 
-
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && isBuilding && previewScript.CanBuild())
         {
             BuildIt();
+
         }
 
         if (Input.GetMouseButtonDown(1) && isBuilding)
         {
             StopBuild();
+
         }
 
         if (Input.GetKeyDown(KeyCode.R) && isBuilding)

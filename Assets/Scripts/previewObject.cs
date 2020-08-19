@@ -15,6 +15,7 @@ public class previewObject : MonoBehaviour
     private bool canBuild = false;
 
 
+
     private void Start()
     {
         myRend = GetComponent<MeshRenderer>();

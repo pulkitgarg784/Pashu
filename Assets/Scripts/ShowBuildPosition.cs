@@ -5,8 +5,12 @@ using UnityEngine;
 public class ShowBuildPosition : MonoBehaviour
 {
     public GameObject mousePointer;
-
-    // Update is called once per frame
+    int layerMask;
+    public Camera cam;
+    private void Start()
+    {
+        layerMask = (1 << LayerMask.NameToLayer("Floor"));
+    }
     void Update()
     {
         if (mousePointer != null)
@@ -16,10 +20,9 @@ public class ShowBuildPosition : MonoBehaviour
     }
     public Vector3 getWorldPoint()
     {
-        Camera cam = GetComponent<Camera>();
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 1000, layerMask))
         {
             return hit.point;
         }

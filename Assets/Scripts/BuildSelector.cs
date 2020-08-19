@@ -10,10 +10,12 @@ public class BuildSelector : MonoBehaviour
     public bool showPanel = true;
     PiUIManager piUi;
     private PiUI normalMenu;
-
+    cameraController _cameraController;
 
     private void Start()
     {
+        _cameraController = FindObjectOfType<cameraController>();
+
         piUi = FindObjectOfType<PiUIManager>();
         normalMenu = piUi.GetPiUIOf("Normal Menu");
         //piUi.ChangeMenuState("Normal Menu", new Vector2(Screen.width / 2f, Screen.height / 2f));
@@ -29,6 +31,8 @@ public class BuildSelector : MonoBehaviour
     {
         showPanel = !showPanel;
         piUi.ChangeMenuState("Normal Menu", new Vector2(Screen.width / 2f, Screen.height / 2f));
+        _cameraController.enabled = !_cameraController.enabled;
+
 
     }
 
@@ -37,8 +41,10 @@ public class BuildSelector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && showPanel)
         {
             piUi.ChangeMenuState("Normal Menu", new Vector2(Screen.width / 2f, Screen.height / 2f));
+            _cameraController.enabled = !_cameraController.enabled;
         }
 
     }
+
 
 }
