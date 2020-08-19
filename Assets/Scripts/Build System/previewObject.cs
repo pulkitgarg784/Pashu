@@ -13,7 +13,7 @@ public class previewObject : MonoBehaviour
 
     private MeshRenderer myRend;
     private bool canBuild = false;
-
+    public bool snapToGrid;
 
 
     private void Start()

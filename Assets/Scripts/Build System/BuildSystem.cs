@@ -15,7 +15,6 @@ public class BuildSystem : MonoBehaviour
     private previewObject previewScript;
 
     private bool isBuilding = false;
-
     private void Start()
     {
 
@@ -49,6 +48,7 @@ public class BuildSystem : MonoBehaviour
     {
         preview = Instantiate(_go, Vector3.zero, Quaternion.identity);
         previewScript = preview.GetComponent<previewObject>();
+
         isBuilding = true;
     }
 
@@ -81,11 +81,15 @@ public class BuildSystem : MonoBehaviour
 
     private void PositionObj(Vector3 _pos)
     {
-        float x = Mathf.Floor(_pos.x + 0.5f) + 0.5f;
+        if (previewScript.snapToGrid)
+        {
+            float x = Mathf.Floor(_pos.x + 0.5f) + 0.5f; //modiify the second +0.5f when you import actual models.
 
-        float z = Mathf.Floor(_pos.z + 0.5f) + 0.5f;
+            float z = Mathf.Floor(_pos.z + 0.5f) + 0.5f;//modiify the second +0.5f when you import actual models.
 
-        preview.transform.position = new Vector3(x, 0.5f, z);
+            preview.transform.position = new Vector3(x, 0f, z);
+        }
+        else { preview.transform.position = new Vector3(_pos.x, 0f, _pos.z); }
 
     }
 
