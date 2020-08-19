@@ -671,7 +671,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656499008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc341b3a96e7e0941b9ff751e78335f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 986f470258fd8f445b1d03a41942a61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showBuildPosition: {fileID: 1656499013}
@@ -1000,7 +1000,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 0
-  - angle: 278.4286
+  - angle: 40.785706
     sliceLabel: 1x1 Box
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}

@@ -37,6 +37,14 @@ public class CreateWall : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _cameraController.enabled = true;
+
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            isCreating = false;
+            buildPosition.mousePointer.SetActive(false);
+            buildPosition.enabled = false;
+            this.enabled = false;
         }
         if (money >= cost)
         {
@@ -68,7 +76,6 @@ public class CreateWall : MonoBehaviour
     {
         isCreating = false;
         _cameraController.enabled = true;
-
 
     }
     void updateWall()

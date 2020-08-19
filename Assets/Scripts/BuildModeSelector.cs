@@ -2,22 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallSelector : MonoBehaviour
+public class BuildModeSelector : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public ShowBuildPosition _showBuildPosition;
+    public CreateWall _createWall;
+    public GameObject buildpositionIndicator;
+    BuildSelector _buildSelector;
     void Start()
     {
-
+        _buildSelector = FindObjectOfType<BuildSelector>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void setBuildmode(string buildmode)
     {
 
-    }
+        if (buildmode == "Wall")
+        {
+            Debug.Log("wall!");
+            buildpositionIndicator.SetActive(true);
 
-    public void EnableWallGenerator()
-    {
-
+            _showBuildPosition.enabled = true;
+            _createWall.enabled = true;
+            _buildSelector.HidePanel();
+        }
+        else
+        {
+            buildpositionIndicator.SetActive(false);
+            _showBuildPosition.enabled = false;
+            _createWall.enabled = false;
+        }
     }
 }
