@@ -34,18 +34,20 @@ public class CreateWall : MonoBehaviour
     }
     void getInput()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            _cameraController.enabled = true;
+        }
         if (money >= cost)
         {
             if (Input.GetMouseButtonDown(0)) { startBuilding(); }
-            else if (Input.GetMouseButtonUp(0)) { endBuilding(); }
+            else if (Input.GetMouseButtonUp(0))
+            { endBuilding(); }
             else { if (isCreating) { updateWall(); } }
         }
         else
         {
             isCreating = false;
-
-            _cameraController.enabled = true;
-
         }
     }
 
@@ -66,6 +68,8 @@ public class CreateWall : MonoBehaviour
     {
         isCreating = false;
         _cameraController.enabled = true;
+
+
     }
     void updateWall()
     {
@@ -87,4 +91,6 @@ public class CreateWall : MonoBehaviour
         newWall.transform.localScale = new Vector3(newWall.transform.localScale.x, newWall.transform.localScale.y, dist);
         lastpole = newPole;
     }
+
+
 }
