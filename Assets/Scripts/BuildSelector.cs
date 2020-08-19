@@ -36,6 +36,12 @@ public class BuildSelector : MonoBehaviour
 
     }
 
+    public void HidePanel()
+    {
+        piUi.ChangeMenuState("Normal Menu", new Vector2(Screen.width / 2f, Screen.height / 2f));
+        _cameraController.enabled = !_cameraController.enabled;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && showPanel)

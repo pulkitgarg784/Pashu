@@ -257,8 +257,6 @@ GameObject:
   - component: {fileID: 886756828}
   - component: {fileID: 886756827}
   - component: {fileID: 886756826}
-  - component: {fileID: 886756829}
-  - component: {fileID: 886756830}
   m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -331,36 +329,6 @@ Transform:
   m_Father: {fileID: 1457301807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
---- !u!114 &886756829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886756825}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aebad3cd878254449c1cd125731dad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mousePointer: {fileID: 1131593736}
---- !u!114 &886756830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886756825}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42deded107ad24942ac2599cec882e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pole: {fileID: 6310591972911767091, guid: a10d6f29f24488349a07e8c2985cb3df, type: 3}
-  wall: {fileID: 8311366924969205728, guid: 0e6e3de3a19979b4ba225f8c32bbe177, type: 3}
-  Walls: {fileID: 513054887}
-  money: 1000
-  cost: 10
 --- !u!1 &1131593736
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +342,7 @@ GameObject:
   - component: {fileID: 1131593739}
   - component: {fileID: 1131593738}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Build Position Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,6 +574,9 @@ GameObject:
   - component: {fileID: 1656499011}
   - component: {fileID: 1656499010}
   - component: {fileID: 1656499009}
+  - component: {fileID: 1656499013}
+  - component: {fileID: 1656499012}
+  - component: {fileID: 1656499014}
   m_Layer: 0
   m_Name: BuildManager
   m_TagString: Untagged
@@ -660,6 +631,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656499012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42deded107ad24942ac2599cec882e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pole: {fileID: 6310591972911767091, guid: a10d6f29f24488349a07e8c2985cb3df, type: 3}
+  wall: {fileID: 8311366924969205728, guid: 0e6e3de3a19979b4ba225f8c32bbe177, type: 3}
+  Walls: {fileID: 513054887}
+  money: 1000
+  cost: 10
+--- !u!114 &1656499013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aebad3cd878254449c1cd125731dad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePointer: {fileID: 1131593736}
+  cam: {fileID: 886756827}
+--- !u!114 &1656499014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656499008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc341b3a96e7e0941b9ff751e78335f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showBuildPosition: {fileID: 1656499013}
+  _createWall: {fileID: 1656499012}
+  buildpositionIndicator: {fileID: 1131593736}
 --- !u!1 &1993441225
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +978,18 @@ MonoBehaviour:
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
     onSlicePressed:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1656499014}
+          m_MethodName: setBuildmode
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Wall
+            m_BoolArgument: 0
+          m_CallState: 2
     iconSize: 80
     isInteractable: 1
     hoverFunctions: 0
@@ -981,6 +1009,17 @@ MonoBehaviour:
     onSlicePressed:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1656499014}
+          m_MethodName: setBuildmode
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Object
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1656499010}
           m_MethodName: StartBuild
           m_Mode: 2
