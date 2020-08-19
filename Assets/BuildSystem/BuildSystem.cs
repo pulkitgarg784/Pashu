@@ -54,7 +54,8 @@ public class BuildSystem : MonoBehaviour
         preview = null;
         previewScript = null;
         isBuilding = false;
-        selector.TogglePanel();
+        //selector.TogglePanel();
+        selector.showPanel = !selector.showPanel;
     }
 
     private void BuildIt()
