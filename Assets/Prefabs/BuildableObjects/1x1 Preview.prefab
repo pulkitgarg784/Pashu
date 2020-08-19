@@ -127,3 +127,4 @@ MonoBehaviour:
   badMat: {fileID: 2100000, guid: 0c658d645ff98ea4cb8ef26d4e854a98, type: 2}
   prefab: {fileID: 956363603367750997, guid: b63f6687b08a2064b8b547ebe364785c, type: 3}
   snapToGrid: 1
+  cost: 100

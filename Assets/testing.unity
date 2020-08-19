@@ -638,7 +638,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656499008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42deded107ad24942ac2599cec882e98, type: 3}
   m_Name: 
@@ -646,7 +646,6 @@ MonoBehaviour:
   pole: {fileID: 6310591972911767091, guid: a10d6f29f24488349a07e8c2985cb3df, type: 3}
   wall: {fileID: 8311366924969205728, guid: 0e6e3de3a19979b4ba225f8c32bbe177, type: 3}
   Walls: {fileID: 513054887}
-  money: 1000
   cost: 10
 --- !u!114 &1656499013
 MonoBehaviour:
@@ -655,7 +654,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656499008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3aebad3cd878254449c1cd125731dad9, type: 3}
   m_Name: 
@@ -677,6 +676,50 @@ MonoBehaviour:
   _showBuildPosition: {fileID: 1656499013}
   _createWall: {fileID: 1656499012}
   buildpositionIndicator: {fileID: 1131593736}
+--- !u!1 &1779430516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779430518}
+  - component: {fileID: 1779430517}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1779430517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779430516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414bc0c9e6ee4dc42925d846b16f5ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: 1000
+--- !u!4 &1779430518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779430516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 129.83043, y: 71.79367, z: 102.75172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993441225
 GameObject:
   m_ObjectHideFlags: 0

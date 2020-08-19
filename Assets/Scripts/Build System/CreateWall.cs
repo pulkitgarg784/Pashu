@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CreateWall : MonoBehaviour
 {
+    Stats stats;
     bool isCreating;
     ShowBuildPosition buildPosition;
     public GameObject pole;
@@ -15,13 +16,13 @@ public class CreateWall : MonoBehaviour
     int WallIndex;
     GameObject wallParent;
     public GameObject Walls;
-    public int money = 100;
-    public int cost = 10;
+    public float cost = 10;
     // Start is called before the first frame update
     void Start()
     {
         buildPosition = GetComponent<ShowBuildPosition>();
         _cameraController = FindObjectOfType<cameraController>();
+        stats = FindObjectOfType<Stats>();
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class CreateWall : MonoBehaviour
             buildPosition.enabled = false;
             this.enabled = false;
         }
-        if (money >= cost)
+        if (stats.Money >= cost)
         {
             if (Input.GetMouseButtonDown(0)) { startBuilding(); }
             else if (Input.GetMouseButtonUp(0))
@@ -92,7 +93,7 @@ public class CreateWall : MonoBehaviour
         GameObject newPole = Instantiate(pole, current, Quaternion.identity, wallParent.transform);
         Vector3 mid = Vector3.Lerp(newPole.transform.position, lastpole.transform.position, 0.5f);
         GameObject newWall = Instantiate(wall, mid, Quaternion.identity, wallParent.transform);
-        money -= cost;
+        stats.Money -= cost;
         newWall.transform.LookAt(lastpole.transform);
         float dist = Vector3.Distance(newPole.transform.position, lastpole.transform.position);
         newWall.transform.localScale = new Vector3(newWall.transform.localScale.x, newWall.transform.localScale.y, dist);

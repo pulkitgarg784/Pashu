@@ -14,11 +14,14 @@ public class previewObject : MonoBehaviour
     private MeshRenderer myRend;
     private bool canBuild = false;
     public bool snapToGrid;
+    public float cost;
+    private Stats stats;
 
 
     private void Start()
     {
         myRend = GetComponent<MeshRenderer>();
+        stats = FindObjectOfType<Stats>();
         ChangeColor();
     }
 
@@ -63,10 +66,13 @@ public class previewObject : MonoBehaviour
     public void Build()
     {
 
-
-        Instantiate(prefab, transform.position, transform.rotation);
-        Destroy(gameObject);
-
+        if (stats.Money >= cost)
+        {
+            stats.Money -= cost;
+            Instantiate(prefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+        else { Debug.Log("no money left"); }
 
     }
 
