@@ -9,6 +9,12 @@ public class AnimalController : MonoBehaviour
     public Animator animator;
     public float runSpeed;
     public float walkSpeed;
+
+    //Wander
+    public float wanderRadius;
+    public float wanderTimer;
+    private float timer;
+
     void Start()
     {
         if (cam == null)
@@ -20,14 +26,13 @@ public class AnimalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        timer += Time.deltaTime;
+
+        if (timer >= wanderTimer)
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                agent.SetDestination(hit.point);
-            }
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
+            timer = 0;
         }
 
         if (agent.remainingDistance >= 3f)
@@ -51,4 +56,18 @@ public class AnimalController : MonoBehaviour
             agent.speed = Mathf.Lerp(agent.speed, walkSpeed, 3 * Time.deltaTime);
         }
     }
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+
+        randDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        return navHit.position;
+    }
 }
+
+
