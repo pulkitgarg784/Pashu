@@ -7,6 +7,8 @@ public class AnimalController : MonoBehaviour
     public Camera cam;
     public NavMeshAgent agent;
     public Animator animator;
+    public float runSpeed;
+    public float walkSpeed;
     void Start()
     {
         if (cam == null)
@@ -28,21 +30,25 @@ public class AnimalController : MonoBehaviour
             }
         }
 
-        if (agent.remainingDistance > agent.stoppingDistance + 3f)
+        if (agent.remainingDistance >= 3f)
         {
+
             animator.SetBool("isRunning", true);
-            agent.speed = Mathf.Lerp(agent.speed, 3, .1f);
+            animator.SetBool("isWalking", false);
+            agent.speed = Mathf.Lerp(agent.speed, runSpeed, 3 * Time.deltaTime);
         }
-        else if (agent.remainingDistance > agent.stoppingDistance + 0.1f)
+        else if (agent.remainingDistance <= 0.1f)
+        {
+            Debug.Log("stop");
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
+
+        }
+        else if (agent.remainingDistance < 3f)
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isWalking", true);
-            agent.speed = Mathf.Lerp(agent.speed, 1, .1f);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-
+            agent.speed = Mathf.Lerp(agent.speed, walkSpeed, 3 * Time.deltaTime);
         }
     }
 }
