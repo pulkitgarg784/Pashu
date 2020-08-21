@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GreatDane
+  m_Controller: {fileID: 9100000, guid: 60b065feb30fee84ba7f0a7871c5a7da, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a8346a99155c7fa479db208833df178f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ef518564e3bf98a44a2a9ae58c1288c7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bff7e9da4f5ac2749b95155957b41940, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7773525e632ba034bb7b1ce1318b37c6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a002fd2653a34f847afd82a6e7d700c3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 755a24f3318f9a84fb880871122de2e6, type: 2}

@@ -5,6 +5,8 @@ using UnityEngine.AI;
 public class AnimalController : MonoBehaviour
 {
     public Camera cam;
+    public Material[] skins;
+    public Renderer meshRenderer;
     public NavMeshAgent agent;
     public Animator animator;
     public float runSpeed;
@@ -17,10 +19,12 @@ public class AnimalController : MonoBehaviour
 
     void Start()
     {
+        meshRenderer.material = skins[Random.Range(0, skins.Length)];
         if (cam == null)
         {
             cam = Camera.main;
         }
+        wanderTimer += Random.Range(-3, 3);
     }
 
     // Update is called once per frame
@@ -33,6 +37,9 @@ public class AnimalController : MonoBehaviour
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             timer = 0;
+            wanderTimer += Random.Range(-3, 3);
+            wanderTimer = Mathf.Clamp(wanderTimer, 5, 15);
+
         }
 
         if (agent.remainingDistance >= 3f)
@@ -40,11 +47,10 @@ public class AnimalController : MonoBehaviour
 
             animator.SetBool("isRunning", true);
             animator.SetBool("isWalking", false);
-            agent.speed = Mathf.Lerp(agent.speed, runSpeed, 3 * Time.deltaTime);
+            agent.speed = Mathf.Lerp(agent.speed, runSpeed, 2 * Time.deltaTime);
         }
         else if (agent.remainingDistance <= 0.1f)
         {
-            Debug.Log("stop");
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", false);
 
@@ -53,7 +59,7 @@ public class AnimalController : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isWalking", true);
-            agent.speed = Mathf.Lerp(agent.speed, walkSpeed, 3 * Time.deltaTime);
+            agent.speed = Mathf.Lerp(agent.speed, walkSpeed, 2 * Time.deltaTime);
         }
     }
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
@@ -67,6 +73,11 @@ public class AnimalController : MonoBehaviour
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
 
         return navHit.position;
+    }
+
+    public void OnMouseDown()
+    {
+        cameraController.instance.followTransform = transform;
     }
 }
 
