@@ -59,11 +59,16 @@ public class AnimalController : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("Food").Length > 0)
             {
 
-                target = findClosestObjectWithTag("Food").transform.position;
-                agent.SetDestination(target);
-                if (Vector3.Distance(transform.position, target) <= 2f)
+                target = findClosestResourceWithTag("Food").transform.position;
+                if (target != null)
                 {
-                    currentState = State.Eating;
+                    agent.SetDestination(target);
+                    if (Vector3.Distance(transform.position, target) <= 2f)
+                    {
+                        Destroy(findClosestResourceWithTag("Food"));
+                        findClosestResourceWithTag("Food").GetComponent<Resource>().isOccupied = true;
+                        currentState = State.Eating;
+                    }
                 }
             }
         }
@@ -72,10 +77,13 @@ public class AnimalController : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("Water").Length > 0)
             {
 
-                target = findClosestObjectWithTag("Water").transform.position;
+                target = findClosestResourceWithTag("Water").transform.position;
                 agent.SetDestination(target);
                 if (Vector3.Distance(transform.position, target) <= 2f)
                 {
+                    Destroy(findClosestResourceWithTag("Water"));
+
+                    findClosestResourceWithTag("Water").GetComponent<Resource>().isOccupied = true;
                     currentState = State.Drinking;
                 }
             }
@@ -110,7 +118,7 @@ public class AnimalController : MonoBehaviour
         NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
         return navHit.position;
     }
-    private GameObject findClosestObjectWithTag(string tagtoCheck)
+    private GameObject findClosestResourceWithTag(string tagtoCheck)
     {
 
         GameObject[] gos;
@@ -120,15 +128,22 @@ public class AnimalController : MonoBehaviour
         Vector3 position = transform.position;
         foreach (GameObject go in gos)
         {
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
+            if (!go.GetComponent<Resource>().isOccupied)
             {
-                closest = go;
-                distance = curDistance;
+                Vector3 diff = go.transform.position - position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance < distance)
+                {
+                    closest = go;
+                    distance = curDistance;
+                }
             }
         }
-        return closest;
+        if (closest != null)
+        {
+            return closest;
+        }
+        return null;
     }
 
     public void OnMouseDown()
