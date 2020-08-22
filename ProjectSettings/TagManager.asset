@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - Wall
   - Building
+  - Food
+  - Water
   layers:
   - Default
   - TransparentFX

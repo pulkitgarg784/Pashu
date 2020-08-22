@@ -1478,6 +1478,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3c8492f79b9724dfbb50150474e675e8, type: 2}
   - {fileID: 2100000, guid: 12aa8cb62f7ac484a82375aaaf544c8b, type: 2}
   meshRenderer: {fileID: 244054951490057837}
+  currentState: 0
   agent: {fileID: 180914018451648006}
   animator: {fileID: 180914018451648004}
   runSpeed: 3
