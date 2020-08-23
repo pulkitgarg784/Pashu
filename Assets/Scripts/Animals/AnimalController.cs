@@ -10,11 +10,8 @@ public class AnimalController : MonoBehaviour
     public enum State
     {
         Wander,
-        Hungry,
-        Eating,
-        Thirsty,
-        Drinking,
-        Sleeping
+        goToFood,
+        goToWater
     }
     public State currentState;
 
@@ -29,6 +26,17 @@ public class AnimalController : MonoBehaviour
     public float wanderTimer;
     private float timer;
 
+    //Stats
+    [Header("Stats:")]
+    public float health = 100;
+    public float water = 100;
+    private float healthReductionSpeed = 2;
+    private void OnEnable()
+    {
+        if (health == 0) { health = 100; }
+        if (water == 0) { water = 100; }
+        healthReductionSpeed = Random.Range(1.0f, 2.0f);
+    }
     void Start()
     {
         meshRenderer.material = skins[Random.Range(0, skins.Length)];
@@ -36,11 +44,31 @@ public class AnimalController : MonoBehaviour
         {
             cam = Camera.main;
         }
+        currentState = State.Wander;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        health -= Time.deltaTime * healthReductionSpeed;
+        water -= Time.deltaTime * (healthReductionSpeed / 2);
+        if (health <= 0 || water <= 0)
+        {
+            health = 0;
+            water = 0;
+            Debug.Log(transform.name + " died");
+            animator.SetBool("isSleeping", true);
+            return;
+        }
+        if (health < 50)
+        {
+            currentState = State.goToFood;
+        }
+        if (water < 50)
+        {
+            currentState = State.goToWater;
+        }
         if (currentState == State.Wander)
         {
             timer += Time.deltaTime;
@@ -54,9 +82,12 @@ public class AnimalController : MonoBehaviour
                 wanderTimer = Mathf.Clamp(wanderTimer, 5, 15);
             }
         }
-        if (currentState == State.Hungry)
+
+        if (currentState == State.goToFood)
         {
-            if (GameObject.FindGameObjectsWithTag("Food").Length > 0)
+            Debug.Log(transform.name + " is hungry");
+
+            if (findClosestResourceWithTag("Food") != null)
             {
 
                 target = findClosestResourceWithTag("Food").transform.position;
@@ -67,31 +98,43 @@ public class AnimalController : MonoBehaviour
                     {
                         Destroy(findClosestResourceWithTag("Food"));
                         findClosestResourceWithTag("Food").GetComponent<Resource>().isOccupied = true;
-                        currentState = State.Eating;
+                        health = 100;
+                        currentState = State.Wander;
                     }
                 }
             }
+            else
+            {
+                currentState = State.Wander;
+            }
         }
-        if (currentState == State.Thirsty)
+
+        if (currentState == State.goToWater)
         {
-            if (GameObject.FindGameObjectsWithTag("Water").Length > 0)
+            Debug.Log(transform.name + " is thirsty");
+
+            if (findClosestResourceWithTag("Water") != null)
             {
 
                 target = findClosestResourceWithTag("Water").transform.position;
-                agent.SetDestination(target);
-                if (Vector3.Distance(transform.position, target) <= 2f)
+                if (target != null)
                 {
-                    Destroy(findClosestResourceWithTag("Water"));
-
-                    findClosestResourceWithTag("Water").GetComponent<Resource>().isOccupied = true;
-                    currentState = State.Drinking;
+                    agent.SetDestination(target);
+                    if (Vector3.Distance(transform.position, target) <= 2f)
+                    {
+                        Destroy(findClosestResourceWithTag("Water"));
+                        findClosestResourceWithTag("Water").GetComponent<Resource>().isOccupied = true;
+                        water = 100;
+                        currentState = State.Wander;
+                    }
                 }
             }
+            else
+            {
+                currentState = State.Wander;
+            }
         }
-        if (currentState == State.Sleeping)
-        {
-            animator.SetBool("isSleeping", true);
-        }
+
         if (agent.remainingDistance >= 3f)
         {
             animator.SetBool("isRunning", true);
@@ -139,11 +182,8 @@ public class AnimalController : MonoBehaviour
                 }
             }
         }
-        if (closest != null)
-        {
-            return closest;
-        }
-        return null;
+
+        return closest;
     }
 
     public void OnMouseDown()
