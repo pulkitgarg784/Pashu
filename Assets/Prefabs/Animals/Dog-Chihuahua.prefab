@@ -1247,12 +1247,16 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 6155f6b1fcf4d457d9a1f32cad21f895, type: 2}
   - {fileID: 2100000, guid: 07c5feaa3106b40cd86e1899f2174432, type: 2}
   meshRenderer: {fileID: 7423391666940665033}
+  currentState: 0
   agent: {fileID: 7423391666935386528}
   animator: {fileID: 7423391666944745993}
+  rotateOnDeath: 1
   runSpeed: 2
   walkSpeed: 0.5
   wanderRadius: 10
   wanderTimer: 10
+  health: 100
+  water: 100
 --- !u!65 &7423391666935386532
 BoxCollider:
   m_ObjectHideFlags: 0

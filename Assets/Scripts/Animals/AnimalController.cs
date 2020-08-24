@@ -11,13 +11,15 @@ public class AnimalController : MonoBehaviour
     {
         Wander,
         goToFood,
-        goToWater
+        goToWater,
+        Dead
     }
     public State currentState;
 
     public NavMeshAgent agent;
     Vector3 target;
     public Animator animator;
+    public bool rotateOnDeath;
     public float runSpeed;
     public float walkSpeed;
 
@@ -55,10 +57,20 @@ public class AnimalController : MonoBehaviour
         water -= Time.deltaTime * (healthReductionSpeed / 2);
         if (health <= 0 || water <= 0)
         {
+            currentState = State.Dead;
             health = 0;
             water = 0;
             Debug.Log(transform.name + " died");
             animator.SetBool("isSleeping", true);
+            agent.enabled = false;
+            if (rotateOnDeath)
+            {
+                if (transform.rotation.eulerAngles.z <= 90)
+                {
+                    transform.rotation *= Quaternion.Euler(0, 0, 90f * 2 * Time.deltaTime);
+                }
+            }
+            Destroy(gameObject, 5);
             return;
         }
         if (health < 50)
