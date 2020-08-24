@@ -27,7 +27,7 @@ public class previewObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Building") || other.CompareTag("Wall") || other.CompareTag("Food"))
+        if (!other.CompareTag("Ground"))
         {
             obj.Add(other.gameObject);
         }
@@ -38,7 +38,7 @@ public class previewObject : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.CompareTag("Building") || other.CompareTag("Wall") || other.CompareTag("Food"))
+        if (!other.CompareTag("Ground"))
         {
             obj.Remove(other.gameObject);
         }

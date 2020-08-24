@@ -9,6 +9,9 @@ TagManager:
   - Building
   - Food
   - Water
+  - Table
+  - Ground
+  - Man
   layers:
   - Default
   - TransparentFX

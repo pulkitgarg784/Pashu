@@ -8,6 +8,11 @@ public class ManController : MonoBehaviour
     public Camera camera;
     public NavMeshAgent agent;
     public ThirdPersonCharacter character;
+    public bool busy;
+
+    public float wanderRadius;
+    public float wanderTimer;
+    private float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +22,7 @@ public class ManController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                agent.SetDestination(hit.point);
-            }
-        }
         if (agent.remainingDistance > agent.stoppingDistance)
         {
             character.Move(agent.desiredVelocity, false, false);
@@ -35,5 +31,28 @@ public class ManController : MonoBehaviour
         {
             character.Move(Vector3.zero, false, false);
         }
+
+        if (!busy)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= wanderTimer)
+            {
+
+                agent.SetDestination(RandomNavSphere(transform.position, wanderRadius, -1));
+                timer = 0;
+                wanderTimer += Random.Range(-3, 3);
+                wanderTimer = Mathf.Clamp(wanderTimer, 5, 15);
+            }
+        }
+    }
+
+    public Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+        randDirection += origin;
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+        return navHit.position;
     }
 }

@@ -161,7 +161,7 @@ public class AnimalController : MonoBehaviour
             agent.speed = Mathf.Lerp(agent.speed, walkSpeed, 2 * Time.deltaTime);
         }
     }
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    public Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
         Vector3 randDirection = Random.insideUnitSphere * dist;
         randDirection += origin;
