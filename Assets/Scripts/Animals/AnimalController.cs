@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AnimalController : MonoBehaviour
 {
-    public Camera cam;
     public Material[] skins;
     public Renderer meshRenderer;
     public enum State
@@ -42,10 +41,7 @@ public class AnimalController : MonoBehaviour
     void Start()
     {
         meshRenderer.material = skins[Random.Range(0, skins.Length)];
-        if (cam == null)
-        {
-            cam = Camera.main;
-        }
+
         currentState = State.Wander;
 
     }
