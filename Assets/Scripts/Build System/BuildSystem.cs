@@ -83,9 +83,9 @@ public class BuildSystem : MonoBehaviour
     {
         if (previewScript.snapToGrid)
         {
-            float x = Mathf.Floor(_pos.x + 0.5f) + 0.5f; //modiify the second +0.5f when you import actual models.
-            float y = Mathf.Floor(_pos.y + 0.5f) + 0.5f; //modiify the second +0.5f when you import actual models.
-            float z = Mathf.Floor(_pos.z + 0.5f) + 0.5f;//modiify the second +0.5f when you import actual models.
+            float x = Mathf.Floor(_pos.x + 0.5f) + 0.5f; //modify the second +0.5f when you import actual models.
+            float y = Mathf.Floor(_pos.y + 0.5f) + 0.5f; //modify the second +0.5f when you import actual models.
+            float z = Mathf.Floor(_pos.z + 0.5f) + 0.5f;//modify the second +0.5f when you import actual models.
 
             preview.transform.position = new Vector3(x, y, z);
         }
