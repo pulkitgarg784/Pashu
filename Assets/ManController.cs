@@ -13,10 +13,12 @@ public class ManController : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     private float timer;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         agent.updateRotation = false;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class ManController : MonoBehaviour
 
         if (!busy)
         {
+            animator.SetBool("isWorking", false);
             timer += Time.deltaTime;
 
             if (timer >= wanderTimer)
@@ -44,6 +47,10 @@ public class ManController : MonoBehaviour
                 wanderTimer += Random.Range(-3, 3);
                 wanderTimer = Mathf.Clamp(wanderTimer, 5, 15);
             }
+        }
+        if (busy)
+        {
+            animator.SetBool("isWorking", true);
         }
     }
 

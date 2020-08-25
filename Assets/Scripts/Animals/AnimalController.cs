@@ -93,7 +93,7 @@ public class AnimalController : MonoBehaviour
 
         if (currentState == State.goToFood)
         {
-            Debug.Log(transform.name + " is hungry");
+            //Debug.Log(transform.name + " is hungry");
 
             if (findClosestResourceWithTag("Food") != null)
             {
@@ -119,7 +119,7 @@ public class AnimalController : MonoBehaviour
 
         if (currentState == State.goToWater)
         {
-            Debug.Log(transform.name + " is thirsty");
+            //Debug.Log(transform.name + " is thirsty");
 
             if (findClosestResourceWithTag("Water") != null)
             {
