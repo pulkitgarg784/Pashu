@@ -109,9 +109,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.0500001, y: 0.275, z: 0.55}
+  m_Extents: {x: 1, y: 0.25, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.275, z: 0}
   m_TimeToStationary: 0.5
@@ -135,6 +135,7 @@ MonoBehaviour:
   - {fileID: 2565682497093873015}
   food: {fileID: 956363603367750997, guid: d01e6c4f269e9ed4faa14fa1d3364c8c, type: 3}
   water: {fileID: 956363603367750997, guid: c728a71481221a64f958006c85ff566a, type: 3}
+  isOccupied: 0
 --- !u!1 &853758406000296192
 GameObject:
   m_ObjectHideFlags: 0

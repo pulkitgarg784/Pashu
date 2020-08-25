@@ -9,6 +9,7 @@ public class table : MonoBehaviour
     public GameObject food;
     public GameObject water;
     private ManController man;
+    public bool isOccupied;
     void Start()
     {
         SpawnObjects();
@@ -17,6 +18,7 @@ public class table : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         for (int i = 0; i < foodSpawnPoints.Length; i++)
         {
             if (foodSpawnPoints[i].childCount == 0)
@@ -24,14 +26,14 @@ public class table : MonoBehaviour
                 if (findClosestMan() != null)
                 {
                     man = findClosestMan().GetComponent<ManController>();
-                    man.busy = true;
                     man.agent.SetDestination(transform.position);
                     Debug.Log("going to table");
 
                     if (man.agent.remainingDistance <= 2)
                     {
                         Debug.Log("Refilling");
-
+                        isOccupied = true;
+                        SpawnObjects();
                         Invoke("SpawnObjects", 10);
                     }
                 }
@@ -41,19 +43,19 @@ public class table : MonoBehaviour
                 if (findClosestMan() != null)
                 {
                     man = findClosestMan().GetComponent<ManController>();
-                    man.busy = true;
                     man.agent.SetDestination(transform.position);
                     Debug.Log("going to table");
 
                     if (man.agent.remainingDistance <= 2)
                     {
                         Debug.Log("Refilling");
-
+                        isOccupied = true;
                         Invoke("SpawnObjects", 10);
                     }
                 }
             }
         }
+
     }
 
     void SpawnObjects()
@@ -74,10 +76,7 @@ public class table : MonoBehaviour
                 waterObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             }
         }
-        if (man != null)
-        {
-            man.busy = false;
-        }
+
     }
 
     GameObject findClosestMan()
@@ -90,7 +89,7 @@ public class table : MonoBehaviour
         Vector3 position = transform.position;
         foreach (GameObject go in gos)
         {
-            if (!go.GetComponent<ManController>().busy)
+            if (go.GetComponent<ManController>() != null)
             {
                 Vector3 diff = go.transform.position - position;
                 float curDistance = diff.sqrMagnitude;
