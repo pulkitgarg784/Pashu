@@ -31,4 +31,9 @@ public class UIManager : MonoBehaviour
         xpSlider.value = stats.XP;
         animalText.text = "Animals: " + stats.animalCount.ToString();
     }
+    public void setDayMonth(string day, string month)
+    {
+        dateText.text = day;
+        monthText.text = month;
+    }
 }

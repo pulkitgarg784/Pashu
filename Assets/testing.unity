@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 455433807}
   - component: {fileID: 455433806}
   m_Layer: 5
-  m_Name: Month (1)
+  m_Name: Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3092,6 +3092,7 @@ GameObject:
   - component: {fileID: 1779430518}
   - component: {fileID: 1779430517}
   - component: {fileID: 1779430519}
+  - component: {fileID: 1779430520}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -3144,9 +3145,21 @@ MonoBehaviour:
   moneyText: {fileID: 1424677625}
   levelText: {fileID: 89633656}
   xpSlider: {fileID: 475869412}
-  dateText: {fileID: 0}
-  monthText: {fileID: 0}
+  dateText: {fileID: 455433806}
+  monthText: {fileID: 1333421351}
   animalText: {fileID: 201636918}
+--- !u!114 &1779430520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779430516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ba502de7a608c429b67262ec0d3689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1783264818
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class AnimalController : MonoBehaviour
     public float health = 100;
     public float water = 100;
     public float healthReductionSpeed = 2;
+    bool isDead;
 
     //Name and age
     private string[] catNames = new string[] { "Oliver", "Leo", "Milo", "Charlie", "Max", "Jack", "Simba", "Loki", "Oscar", "Jasper", "Buddy", "Tiger", "Toby", "George", "Smokey", "Simon", "Tigger", "Ollie", "Louie", "Felix", "Dexter", "Shadow", "Finn", "Henry", "Kitty", "Oreo", "Gus", "Binx", "Winston", "Sam", "Rocky", "Gizmo", "Sammy", "Jax", "Sebastian", "Blu", "Theo", "Beau", "Salem", "Chester", "Lucky", "Frankie", "Boots", "Cooper", "Thor", "Bear", "Romeo", "Teddy", "Bandit", "Ziggy", "Apollo", "Pumpkin", "Boo", "Zeus", "Bob", "Tucker", "Jackson", "Tom", "Cosmo", "Bruce", "Murphy", "Buster", "Midnight", "Moose", "Merlin", "Frank", "Joey", "Thomas", "Harley", "Prince", "Archie", "Tommy", "Marley", "Otis", "Casper", "Harry", "Benny", "Percy", "Bentley", "Jake", "Ozzy", "Ash", "Sylvester", "Mickey", "Fred", "Walter", "Clyde", "Pepper", "Calvin", "Tux", "Stanley", "Garfield", "Louis", "Mowgli", "Mac", "Luke", "Sunny", "Duke", "Hobbes", "Remi", "Luna", "Bella", "Lily", "Lucy", "Kitty", "Callie", "Nala", "Zoe", "Chloe", "Sophie", "Daisy", "Stella", "Cleo", "Lola", "Gracie", "Mia", "Molly", "Penny", "Willow", "Olive", "Kiki", "Pepper", "Princess", "Rosie", "Ellie", "Maggie", "Coco", "Piper", "Lulu", "Sadie", "Izzy", "Ginger", "Abby", "Sasha", "Pumpkin", "Ruby", "Shadow", "Phoebe", "Millie", "Roxy", "Minnie", "Baby", "Fiona", "Jasmine", "Penelope", "Sassy", "Charlie", "Oreo", "Mittens", "Boo", "Belle", "Misty", "Mimi", "Missy", "Emma", "Annie", "Athena", "Hazel", "Angel", "Ella", "Cookie", "Bailey", "Arya", "Nova", "Olivia", "Zelda", "Maya", "Smokey", "Peanut", "Poppy", "Midnight", "Winnie", "Patches", "Charlotte", "Layla", "Leia", "Delilah", "Alice", "Harley", "Pearl", "Ivy", "Lexi", "Peaches", "Mila", "Romani", "Miss Kitty", "Kitten", "Cat", "Snickers", "Scout", "Blu", "Lucky", "Freya", "Tiger", "Stormy", "Jade", "Honey", "Marley", "Frankie", "Gigi" };
@@ -89,15 +90,19 @@ public class AnimalController : MonoBehaviour
         water -= Time.deltaTime * (healthReductionSpeed / 2);
         if (health <= 0 || water <= 0)
         {
-            stats.XP -= 75;
-            stats.animalCount--;
-            UIManager.instance.UpdateValues();
-            currentState = State.Dead;
-            health = 0;
-            water = 0;
-            Debug.Log(transform.name + " died");
-            animator.SetBool("isSleeping", true);
-            agent.enabled = false;
+            if (!isDead)
+            {
+                stats.XP -= 75;
+                stats.animalCount--;
+                UIManager.instance.UpdateValues();
+                currentState = State.Dead;
+                health = 0;
+                water = 0;
+                Debug.Log(transform.name + " died");
+                animator.SetBool("isSleeping", true);
+                agent.enabled = false;
+            }
+            isDead = true;
             if (rotateOnDeath)
             {
                 if (transform.rotation.eulerAngles.z <= 90)

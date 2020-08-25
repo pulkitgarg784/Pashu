@@ -10,8 +10,11 @@ public class table : MonoBehaviour
     public GameObject water;
     private ManController man;
     public bool isOccupied;
+    Stats stats;
+    public int itemCost;
     void Start()
     {
+        stats = FindObjectOfType<Stats>();
         for (int i = 0; i < foodSpawnPoints.Length; i++)
         {
             if (foodSpawnPoints[i].childCount == 0)
@@ -67,6 +70,7 @@ public class table : MonoBehaviour
             if (foodSpawnPoints[i].childCount == 0)
             {
                 GameObject foodObj = Instantiate(food, foodSpawnPoints[i].position, Quaternion.identity, foodSpawnPoints[i]);
+                stats.Money -= itemCost;
                 foodObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             }
         }
@@ -75,6 +79,7 @@ public class table : MonoBehaviour
             if (waterSpawnPoints[i].childCount == 0)
             {
                 GameObject waterObj = Instantiate(water, waterSpawnPoints[i].position, Quaternion.identity, waterSpawnPoints[i]);
+                stats.Money -= itemCost;
                 waterObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             }
         }
