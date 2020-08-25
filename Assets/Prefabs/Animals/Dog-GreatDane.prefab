@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2a83410a3ffad47b840b7b178bf8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   skins:
   - {fileID: 2100000, guid: 789b2da6921b64e929234eaa61505c3f, type: 2}
   - {fileID: 2100000, guid: fe2e9e8f5d6ab4fddb53d2d5df14ada2, type: 2}
@@ -316,8 +315,12 @@ MonoBehaviour:
   walkSpeed: 1
   wanderRadius: 10
   wanderTimer: 10
+  animalType: dog
   health: 100
   water: 100
+  healthReductionSpeed: 2
+  animalName: 
+  animalAge: 0
 --- !u!65 &9021828738234821119
 BoxCollider:
   m_ObjectHideFlags: 0

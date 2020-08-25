@@ -94,6 +94,7 @@ public class CreateWall : MonoBehaviour
         Vector3 mid = Vector3.Lerp(newPole.transform.position, lastpole.transform.position, 0.5f);
         GameObject newWall = Instantiate(wall, mid, Quaternion.identity, wallParent.transform);
         stats.Money -= cost;
+        UIManager.instance.UpdateValues();
         newWall.transform.LookAt(lastpole.transform);
         float dist = Vector3.Distance(newPole.transform.position, lastpole.transform.position);
         newWall.transform.localScale = new Vector3(newWall.transform.localScale.x, newWall.transform.localScale.y, dist);

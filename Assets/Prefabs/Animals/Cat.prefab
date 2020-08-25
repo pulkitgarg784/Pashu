@@ -1472,7 +1472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2a83410a3ffad47b840b7b178bf8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   skins:
   - {fileID: 2100000, guid: 341f8275672b74860b0a0dc7c40de5f2, type: 2}
   - {fileID: 2100000, guid: 3c8492f79b9724dfbb50150474e675e8, type: 2}
@@ -1481,10 +1480,17 @@ MonoBehaviour:
   currentState: 0
   agent: {fileID: 180914018451648006}
   animator: {fileID: 180914018451648004}
+  rotateOnDeath: 0
   runSpeed: 3
   walkSpeed: 1
   wanderRadius: 10
   wanderTimer: 10
+  animalType: cat
+  health: 100
+  water: 100
+  healthReductionSpeed: 2
+  animalName: 
+  animalAge: 0
 --- !u!95 &180914018451648004
 Animator:
   serializedVersion: 3

@@ -69,6 +69,7 @@ public class previewObject : MonoBehaviour
         if (stats.Money >= cost)
         {
             stats.Money -= cost;
+            UIManager.instance.UpdateValues();
             Instantiate(prefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }

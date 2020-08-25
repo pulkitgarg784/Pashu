@@ -1897,17 +1897,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2a83410a3ffad47b840b7b178bf8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   skins:
   - {fileID: 2100000, guid: 6b7a28603e9bc44cebffdd89cef80ade, type: 2}
   - {fileID: 2100000, guid: 2d852d11ea1a442b2ba2c0333c128e7f, type: 2}
   meshRenderer: {fileID: 7532941165864806368}
+  currentState: 0
   agent: {fileID: 7532941165870017353}
   animator: {fileID: 7532941165860493600}
+  rotateOnDeath: 0
   runSpeed: 4
   walkSpeed: 2
   wanderRadius: 10
   wanderTimer: 10
+  animalType: rabbit
+  health: 100
+  water: 100
+  healthReductionSpeed: 2
+  animalName: 
+  animalAge: 0
 --- !u!65 &7532941165870017357
 BoxCollider:
   m_ObjectHideFlags: 0
