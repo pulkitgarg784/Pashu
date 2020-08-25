@@ -11,7 +11,7 @@ public class previewObject : MonoBehaviour
     public Material badMat;
     public GameObject prefab;
 
-    private MeshRenderer myRend;
+    public MeshRenderer myRend;
     private bool canBuild = false;
     public bool snapToGrid;
     public float cost;
@@ -20,7 +20,10 @@ public class previewObject : MonoBehaviour
 
     private void Start()
     {
-        myRend = GetComponent<MeshRenderer>();
+        if (myRend == null)
+        {
+            myRend = GetComponent<MeshRenderer>();
+        }
         stats = FindObjectOfType<Stats>();
         ChangeColor();
     }
@@ -51,16 +54,24 @@ public class previewObject : MonoBehaviour
 
     private void ChangeColor()
     {
+
         if (obj.Count == 0)
         {
-            myRend.material = goodMat;
+            if (myRend != null)
+            {
+                myRend.material = goodMat;
+            }
             canBuild = true;
         }
         else
         {
-            myRend.material = badMat;
+            if (myRend != null)
+            {
+                myRend.material = badMat;
+            }
             canBuild = false;
         }
+
     }
 
     public void Build()

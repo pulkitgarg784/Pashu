@@ -304,7 +304,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201636916
 GameObject:
@@ -579,7 +579,7 @@ RectTransform:
   - {fileID: 1893320519}
   - {fileID: 258064700}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1017,7 +1017,7 @@ Transform:
   - {fileID: 1930131749}
   - {fileID: 258355956}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &570956580
 PrefabInstance:
@@ -2041,7 +2041,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1212166138
 PrefabInstance:
@@ -2716,7 +2716,7 @@ Transform:
   m_Children:
   - {fileID: 886756828}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &1457301808
 MonoBehaviour:
@@ -2895,7 +2895,7 @@ Transform:
   m_Children:
   - {fileID: 629323169049600162}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1656499012
 MonoBehaviour:
@@ -3002,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 5986183953514859541, guid: 14d887275ac803b4ba25ec60d9322693,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5986183953514859541, guid: 14d887275ac803b4ba25ec60d9322693,
         type: 3}
@@ -3067,7 +3067,7 @@ Transform:
   - {fileID: 570956581}
   - {fileID: 1702941193}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1771794532
 MonoBehaviour:
@@ -3128,7 +3128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1779430519
 MonoBehaviour:
@@ -3160,6 +3160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ba502de7a608c429b67262ec0d3689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayOfYear: 1
 --- !u!1001 &1783264818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3630,7 +3631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2005302248
 PrefabInstance:
@@ -4071,7 +4072,7 @@ MonoBehaviour:
   interactable: 0
   iconDistance: 1.66
   equalSlices: 1
-  sliceCount: 5
+  sliceCount: 6
   piData:
   - angle: 40.785713
     sliceLabel: Wall
@@ -4114,7 +4115,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 0
-  - angle: 79.80357
+  - angle: 63.842857
     sliceLabel: 1x1 Box
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4167,7 +4168,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 1
-  - angle: 79.80357
+  - angle: 63.842857
     sliceLabel: Food
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4220,7 +4221,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 2
-  - angle: 79.80357
+  - angle: 63.842854
     sliceLabel: Water
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4273,7 +4274,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 3
-  - angle: 79.80359
+  - angle: 63.842857
     sliceLabel: Table
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4327,6 +4328,60 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     order: 4
+  - angle: 63.842865
+    sliceLabel: Helper
+    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
+    disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
+    onSlicePressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1656499014}
+          m_MethodName: setBuildmode
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Object
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1656499010}
+          m_MethodName: StartBuild
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 753371505951123695, guid: 752f3c574416e79438ad11bf6eff7f86,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    iconSize: 80
+    isInteractable: 1
+    hoverFunctions: 1
+    onHoverEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1297729141}
+          m_MethodName: set_text
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'An automated helper which refills food and water on
+              tables: $200'
+            m_BoolArgument: 0
+          m_CallState: 2
+    onHoverExit:
+      m_PersistentCalls:
+        m_Calls: []
+    order: 5
   openedMenu: 0
   worldSpace: 0
   angleList: []
@@ -4634,77 +4689,3 @@ Transform:
   m_Father: {fileID: 629323169049600162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5413116295068113029
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.5820376e-17
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5408657371623993651, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5411422042005542327, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: m_Name
-      value: Man
-      objectReference: {fileID: 0}
-    - target: {fileID: 5411422042005542333, guid: 1c0eb30f4ced71b4da41749006a036ab,
-        type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 886756827}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c0eb30f4ced71b4da41749006a036ab, type: 3}
