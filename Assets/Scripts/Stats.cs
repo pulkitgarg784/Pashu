@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
     public float XP;
     public int Level;
     public int animalCount;
+    public int happiness;
     private void onEnable()
     {
         XP = 0;
@@ -26,6 +27,14 @@ public class Stats : MonoBehaviour
             XP = 100 + XP;
             Level--;
         }
+    }
+    public float happinessIndex()
+    {
+        if (animalCount != 0)
+        {
+            return happiness / animalCount;
+        }
+        return 0;
     }
 
 }

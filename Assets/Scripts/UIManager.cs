@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Text dateText;
     public Text monthText;
     public Text animalText;
+    public Text happinessText;
 
     public static UIManager instance;
     private void Awake()
@@ -30,6 +31,7 @@ public class UIManager : MonoBehaviour
         levelText.text = stats.Level.ToString();
         xpSlider.value = stats.XP;
         animalText.text = "Animals: " + stats.animalCount.ToString();
+        happinessText.text = "Happiness: " + stats.happinessIndex().ToString() + "%";
     }
     public void setDayMonth(string day, string month)
     {

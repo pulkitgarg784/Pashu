@@ -27,7 +27,7 @@ public class adoption : MonoBehaviour
                 GameObject animal = transform.GetChild(rand).gameObject;
                 stats.animalCount--;
                 stats.XP += 100;
-                int fees = Random.Range(500, 1000);
+                int fees = Random.Range(50, 100) * stats.Level;
                 stats.Money += fees;
                 Debug.Log(animal.GetComponent<AnimalController>().animalName + " was adopted for: $" + fees.ToString());
                 UIManager.instance.UpdateValues();
