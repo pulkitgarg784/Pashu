@@ -25,9 +25,11 @@ public class adoption : MonoBehaviour
             if (transform.GetChild(rand).gameObject != null)
             {
                 GameObject animal = transform.GetChild(rand).gameObject;
-                Debug.Log(animal.GetComponent<AnimalController>().animalName + " was adopted");
                 stats.animalCount--;
                 stats.XP += 100;
+                int fees = Random.Range(500, 1000);
+                stats.Money += fees;
+                Debug.Log(animal.GetComponent<AnimalController>().animalName + " was adopted for: $" + fees.ToString());
                 UIManager.instance.UpdateValues();
                 Destroy(animal);
             }
