@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Stats : MonoBehaviour
 {
     public float Money;
@@ -26,6 +26,10 @@ public class Stats : MonoBehaviour
         {
             XP = 100 + XP;
             Level--;
+        }
+        if (Money < 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
     public float happinessIndex()

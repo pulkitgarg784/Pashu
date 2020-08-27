@@ -34,6 +34,10 @@ public class AnimalController : MonoBehaviour
     public float health = 100;
     public float water = 100;
     public float healthReductionSpeed = 2;
+
+    [Header("Indicators:")]
+    public GameObject foodIndicator;
+    public GameObject waterIndicator;
     bool isDead;
 
     //Name and age
@@ -59,6 +63,8 @@ public class AnimalController : MonoBehaviour
         currentState = State.Wander;
         stats.animalCount += 1;
         UIManager.instance.UpdateValues();
+        foodIndicator.SetActive(false);
+        waterIndicator.SetActive(false);
 
     }
 
@@ -115,11 +121,22 @@ public class AnimalController : MonoBehaviour
         }
         if (health < 50)
         {
+            foodIndicator.SetActive(true);
             currentState = State.goToFood;
+        }
+        else if (health >= 50)
+        {
+            foodIndicator.SetActive(false);
         }
         if (water < 50)
         {
+            waterIndicator.SetActive(true);
             currentState = State.goToWater;
+
+        }
+        else if (water >= 50)
+        {
+            waterIndicator.SetActive(false);
         }
         if (currentState == State.Wander)
         {

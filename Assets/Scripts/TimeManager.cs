@@ -67,5 +67,6 @@ public class TimeManager : MonoBehaviour
     {
         stats.Money += bill;
         UIManager.instance.UpdateValues();
+        stopTime = false;
     }
 }
