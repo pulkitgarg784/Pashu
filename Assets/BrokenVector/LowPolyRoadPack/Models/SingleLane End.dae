@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2016-07-14T22:21:16</created>
+    <modified>2016-07-14T22:21:16</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Road-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Road-material" name="Road">
+      <instance_effect url="#Road-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="SingleLane_End_mesh-mesh" name="SingleLane End_mesh">
+      <mesh>
+        <source id="SingleLane_End_mesh-mesh-positions">
+          <float_array id="SingleLane_End_mesh-mesh-positions-array" count="102">9.900002 -4.999999 9.999997 2.500001 4.32143e-7 7.499998 9.900002 0.1500007 9.999997 7.500001 0.1500005 7.499997 7.500001 0.2500006 7.599997 9.03991e-7 -5 -1.68879e-6 10 -5 -2.74179e-6 10 -4.999999 9.899997 7.5 2.5332e-7 -2.54809e-6 2.500001 0 -2.31961e-6 7.500001 5.81155e-7 7.499997 2.400001 0.2500001 -2.31405e-6 2.500001 0.15 -2.32617e-6 7.5 0.1500002 -2.55465e-6 7.6 0.2500002 -2.57551e-6 7.600001 0.2500006 7.499997 9.900002 0.2500007 9.899997 7.50509e-7 0.15 -1.91391e-6 0.1000007 0.25 -1.93477e-6 9.900001 0.2500003 -2.95479e-6 10 0.1500003 -2.96691e-6 10 0.1500007 9.899997 7.600001 0.2500006 7.599997 10 -4.999999 9.999998 2.499992 0.1500004 7.499998 2.399989 0.2500004 7.499998 -7.90866e-6 0.1500004 9.899996 0.09999454 -5 9.999999 -7.75517e-6 -5 9.899996 2.499992 0.2500004 7.6 0.09999436 0.2500005 9.899996 0.09999436 0.1500005 9.999999 2.399989 0.2500004 7.6 -7.73868e-6 -5 9.999999</float_array>
+          <technique_common>
+            <accessor source="#SingleLane_End_mesh-mesh-positions-array" count="34" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SingleLane_End_mesh-mesh-normals">
+          <float_array id="SingleLane_End_mesh-mesh-normals-array" count="87">0 1 0 -3.58246e-7 0.7071105 -0.7071031 0.7071023 0.7071113 9.34249e-7 0 -1.58946e-6 -1 -0.7071051 0.7071085 0 8.42938e-6 0.7071067 -0.7071069 -1 0 1.27157e-7 0.577354 0.5773471 0.5773498 0 0.7071151 -0.7070985 0.7070994 0.7071142 0 -0.7071068 0.7071067 0 1 3.2213e-5 6.03992e-7 0 1 0 0 0.7071098 0.7071038 2.82847e-7 0 1 0 1 0 1 0 0 -0.7071028 0.7071108 -5.68076e-7 0 1 0 0 1 0 0.7071051 0 0.7071085 0 1 0 -2.85059e-7 1 -5.18291e-7 -0.5773435 0.5773602 0.5773472 -0.7071087 0 0.7071049 0 1 4.56982e-6 0.7071049 0.7071088 0 0 1 0 -1 0 -8.74663e-7</float_array>
+          <technique_common>
+            <accessor source="#SingleLane_End_mesh-mesh-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SingleLane_End_mesh-mesh-map-0">
+          <float_array id="SingleLane_End_mesh-mesh-map-0-array" count="216">0.129644 0.8671875 0.129644 0.8671875 0.129644 0.8671875 0.129644 0.8671875 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554688 0.629644 0.8554687 0.629644 0.8554686 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554688 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.364019 0.8710937 0.364019 0.8710938 0.364019 0.8710937 0.364019 0.8710937 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.629644 0.8554687 0.629644 0.8554688 0.629644 0.8554687 0.629644 0.8554686 0.629644 0.8554687 0.629644 0.8554688 0.629644 0.8554686 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.364019 0.8710937 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687 0.629644 0.8554687</float_array>
+          <technique_common>
+            <accessor source="#SingleLane_End_mesh-mesh-map-0-array" count="108" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="SingleLane_End_mesh-mesh-vertices">
+          <input semantic="POSITION" source="#SingleLane_End_mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="Road-material" count="30">
+          <input semantic="VERTEX" source="#SingleLane_End_mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#SingleLane_End_mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#SingleLane_End_mesh-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 3 3 4 3 3 3 4 4 4 4 4 4 4 4 3 3 4 3 3 3 3 4 3 4 4 4 </vcount>
+          <p>10 0 0 8 0 1 9 0 2 1 0 3 29 1 4 4 1 5 3 1 6 24 1 7 12 2 8 11 2 9 25 2 10 24 2 11 10 3 12 1 3 13 24 3 14 3 3 15 22 4 16 15 4 17 3 4 18 4 5 19 22 5 20 3 5 21 8 6 22 10 6 23 3 6 24 13 6 25 16 7 26 2 7 27 21 7 28 32 8 29 29 8 30 24 8 31 25 9 32 32 9 33 24 9 34 15 10 35 14 10 36 13 10 37 3 10 38 9 11 39 12 11 40 24 11 41 1 11 42 29 12 43 30 12 44 16 12 45 4 12 46 31 13 47 2 13 48 16 13 49 30 13 50 27 14 51 0 14 52 2 14 53 31 14 54 19 15 55 14 15 56 15 15 57 16 15 58 6 16 59 20 16 60 21 16 61 7 16 62 17 17 63 26 17 64 30 17 65 18 17 66 22 18 67 16 18 68 15 18 69 16 19 70 22 19 71 4 19 72 2 20 73 0 20 74 7 20 75 21 20 76 7 21 77 0 21 78 23 21 79 32 21 80 30 21 81 29 21 82 30 22 83 32 22 84 25 22 85 30 23 86 26 23 87 31 23 88 26 24 89 28 24 90 27 24 91 31 24 92 27 25 93 28 25 94 33 25 95 21 26 96 20 26 97 19 26 98 16 26 99 11 27 100 18 27 101 30 27 102 25 27 103 5 28 104 28 28 105 26 28 106 17 28 107</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SingleLane_End_mesh" name="SingleLane_End_mesh" type="NODE">
+        <matrix sid="transform">1 2.98023e-8 2.98023e-8 0 3.55271e-15 -4.37114e-8 -1 0 -2.98023e-8 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#SingleLane_End_mesh-mesh" name="SingleLane_End_mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Road-material" target="#Road-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

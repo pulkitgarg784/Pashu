@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2016-10-07T19:33:30</created>
+    <modified>2016-10-07T19:33:30</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="World-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="World-material" name="World">
+      <instance_effect url="#World-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Houses_005_mesh-mesh" name="Houses.005_mesh">
+      <mesh>
+        <source id="Houses_005_mesh-mesh-positions">
+          <float_array id="Houses_005_mesh-mesh-positions-array" count="48">-22.42056 -51.78621 22.42057 -22.42056 16.07456 22.42057 -22.42056 -51.78621 -22.42054 -22.42056 16.07455 -22.42054 22.42053 -51.78621 22.42057 22.42053 16.07456 22.42057 22.42053 -51.78621 -22.42054 22.42053 16.07455 -22.42054 -25.14914 16.07456 25.14913 -25.14914 16.07455 -25.14912 25.14911 16.07455 -25.14912 25.14911 16.07456 25.14913 -25.14914 19.63713 25.14913 -25.14914 19.63712 -25.14912 25.14911 19.63712 -25.14912 25.14911 19.63713 25.14913</float_array>
+          <technique_common>
+            <accessor source="#Houses_005_mesh-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Houses_005_mesh-mesh-normals">
+          <float_array id="Houses_005_mesh-mesh-normals-array" count="30">-1 0 0 0 0 -1 1 0 0 0 0 1 0 -1 0 0 0 1 0 -1 0 0 -1 0 0 1 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Houses_005_mesh-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Houses_005_mesh-mesh-map-0">
+          <float_array id="Houses_005_mesh-mesh-map-0-array" count="112">0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888</float_array>
+          <technique_common>
+            <accessor source="#Houses_005_mesh-mesh-map-0-array" count="56" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Houses_005_mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Houses_005_mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="World-material" count="14">
+          <input semantic="VERTEX" source="#Houses_005_mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Houses_005_mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Houses_005_mesh-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 </vcount>
+          <p>1 0 0 3 0 1 2 0 2 0 0 3 3 1 4 7 1 5 6 1 6 2 1 7 7 2 8 5 2 9 4 2 10 6 2 11 5 3 12 1 3 13 0 3 14 4 3 15 0 4 16 2 4 17 6 4 18 4 4 19 1 4 20 5 4 21 11 4 22 8 4 23 8 5 24 11 5 25 15 5 26 12 5 27 7 4 28 3 4 29 9 4 30 10 4 31 5 6 32 7 6 33 10 6 34 11 6 35 3 7 36 1 7 37 8 7 38 9 7 39 15 8 40 14 8 41 13 8 42 12 8 43 10 9 44 9 9 45 13 9 46 14 9 47 11 2 48 10 2 49 14 2 50 15 2 51 9 0 52 8 0 53 12 0 54 13 0 55</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Houses_005_mesh" name="Houses_005_mesh" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Houses_005_mesh-mesh" name="Houses_005_mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="World-material" target="#World-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

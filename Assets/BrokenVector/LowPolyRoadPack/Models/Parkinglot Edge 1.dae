@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2016-07-14T22:21:16</created>
+    <modified>2016-07-14T22:21:16</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Road-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Road-material" name="Road">
+      <instance_effect url="#Road-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Parkinglot_Edge_1_mesh-mesh" name="Parkinglot Edge 1_mesh">
+      <mesh>
+        <source id="Parkinglot_Edge_1_mesh-mesh-positions">
+          <float_array id="Parkinglot_Edge_1_mesh-mesh-positions-array" count="102">15 -5.1659e-7 -12.5 15 0.2499994 -14.9 1.13247e-6 0 0 15 0 -1.72851e-6 15 0 -2.600002 6.3378e-7 0 -2.6 15 0 -2.400002 6.57622e-7 0 -2.4 -1.96693e-6 -5 -15 -1.48017e-6 0.1499994 -12.5 -1.49964e-6 0.2499995 -12.6 -1.94746e-6 0.2499994 -14.9 5.000001 0 -5.75178e-7 5 0 -2.600001 5 0 -2.400001 15 0.1499994 -12.5 10 0 -1.15185e-6 10 0 -2.600001 10 0 -2.400001 15 0.1499993 -15 -1.96693e-6 0.1499993 -15 -1.48017e-6 -5.1659e-7 -12.5 5.200001 0 -5.98051e-7 9.800001 0 -1.13721e-6 15 -5 -15 15 0.2499995 -12.6 5 0.4999999 -2.600001 5.000001 0.5 -5.97034e-7 9.800001 0.5 -1.15906e-6 10 0.5 -1.1737e-6 10 0.4999999 -2.600001 9.800001 0.4999999 -2.400001 5.200001 0.5 -6.19907e-7 5.2 0.4999999 -2.400001</float_array>
+          <technique_common>
+            <accessor source="#Parkinglot_Edge_1_mesh-mesh-positions-array" count="34" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Parkinglot_Edge_1_mesh-mesh-normals">
+          <float_array id="Parkinglot_Edge_1_mesh-mesh-normals-array" count="72">0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 -1 -7.62939e-7 1.90735e-7 0 1 0 0 1 0 0 0.7071081 -0.7071055 -1.97525e-7 0 -1 0 1 0 0 0 1 1.68587e-7 0.7071098 0.7071038 0 1 0 0 1 0 0 1 0 1 -1.52588e-6 -1.90735e-7 -1.43051e-7 0 -1 1 0 -4.76836e-6 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Parkinglot_Edge_1_mesh-mesh-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Parkinglot_Edge_1_mesh-mesh-map-0">
+          <float_array id="Parkinglot_Edge_1_mesh-mesh-map-0-array" count="184">0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.8740157 0.8628426 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.3974531 0.8940926 0.3974531 0.8940926 0.3974531 0.8940926 0.3974531 0.8940926 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.1240156 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.3945866 0.8690434 0.3945866 0.8690434 0.3945866 0.8690434 0.3945866 0.8690434 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6240157 0.8628426 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213 0.6870079 0.9314213</float_array>
+          <technique_common>
+            <accessor source="#Parkinglot_Edge_1_mesh-mesh-map-0-array" count="92" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Parkinglot_Edge_1_mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Parkinglot_Edge_1_mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="Road-material" count="24">
+          <input semantic="VERTEX" source="#Parkinglot_Edge_1_mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Parkinglot_Edge_1_mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Parkinglot_Edge_1_mesh-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 3 3 4 4 4 4 4 4 4 4 4 4 3 3 </vcount>
+          <p>14 0 0 7 0 1 2 0 2 12 0 3 13 1 4 5 1 5 7 1 6 14 1 7 6 2 8 18 2 9 16 2 10 3 2 11 4 3 12 17 3 13 18 3 14 6 3 15 22 4 16 23 4 17 28 4 18 32 4 19 23 5 20 16 5 21 29 5 22 28 5 23 12 6 24 22 6 25 32 6 26 27 6 27 33 7 28 26 7 29 27 7 30 32 7 31 31 8 32 33 8 33 32 8 34 28 8 35 14 9 36 12 9 37 27 9 38 26 9 39 21 10 40 5 10 41 13 10 42 0 11 43 17 11 44 4 11 45 19 12 46 20 12 47 11 12 48 1 12 49 24 13 50 8 13 51 20 13 52 19 13 53 0 14 54 21 14 55 13 14 56 17 14 57 21 15 58 0 15 59 15 15 60 9 15 61 9 16 62 15 16 63 25 16 64 10 16 65 11 17 66 10 17 67 25 17 68 1 17 69 30 18 70 26 18 71 33 18 72 31 18 73 30 19 74 31 19 75 28 19 76 29 19 77 16 20 78 18 20 79 30 20 80 29 20 81 17 21 82 13 21 83 26 21 84 30 21 85 18 22 86 17 22 87 30 22 88 13 23 89 14 23 90 26 23 91</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Parkinglot_Edge_1_mesh" name="Parkinglot_Edge_1_mesh" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -4.37114e-8 -1 0 0 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Parkinglot_Edge_1_mesh-mesh" name="Parkinglot_Edge_1_mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Road-material" target="#Road-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

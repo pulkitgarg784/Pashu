@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2016-10-07T19:33:30</created>
+    <modified>2016-10-07T19:33:30</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="World-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="World-material" name="World">
+      <instance_effect url="#World-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Houses_003_mesh-mesh" name="Houses.003_mesh">
+      <mesh>
+        <source id="Houses_003_mesh-mesh-positions">
+          <float_array id="Houses_003_mesh-mesh-positions-array" count="72">-9.400025 -11.88893 -6.137226 -9.400025 0.385534 -6.137226 2.874481 -11.88893 -6.137226 2.874481 0.385534 -6.137226 -9.400025 -11.88893 6.137227 -9.400025 0.3855345 6.137226 2.874481 -11.88893 6.137227 2.874481 0.3855345 6.137226 7.742584 0.385534 -6.137226 7.742584 -11.88893 -6.137226 7.742584 0.3855345 6.137226 7.742584 -11.88893 6.137227 2.874481 3.261557 0 2.874481 3.261557 0 7.742584 3.261557 0 7.742584 3.261557 0 -9.400025 4.396835 -6.137226 2.874481 4.396835 -6.137226 2.874481 4.396836 6.137226 -9.400025 4.396836 6.137226 -3.262756 9.596695 -6.137227 -3.262756 9.596695 -6.137227 -3.262756 9.596695 6.137226 -3.262756 9.596695 6.137226</float_array>
+          <technique_common>
+            <accessor source="#Houses_003_mesh-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Houses_003_mesh-mesh-normals">
+          <float_array id="Houses_003_mesh-mesh-normals-array" count="42">0 0 -1 0 -1 0 0 0 1 -1 0 0 0 0 -1 1 0 0 0 0.9055045 -0.4243369 0 0 -1 0 0 1 0 0.9055045 0.4243368 0 0 1 0 0 -1 -0.6464338 0.7629701 0 0.6464357 0.7629685 0</float_array>
+          <technique_common>
+            <accessor source="#Houses_003_mesh-mesh-normals-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Houses_003_mesh-mesh-map-0">
+          <float_array id="Houses_003_mesh-mesh-map-0-array" count="176">0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888 0.1770833 0.8263888</float_array>
+          <technique_common>
+            <accessor source="#Houses_003_mesh-mesh-map-0-array" count="88" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Houses_003_mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Houses_003_mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="World-material" count="22">
+          <input semantic="VERTEX" source="#Houses_003_mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Houses_003_mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Houses_003_mesh-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </vcount>
+          <p>1 0 0 3 0 1 2 0 2 0 0 3 6 1 4 2 1 5 9 1 6 11 1 7 7 2 8 5 2 9 4 2 10 6 2 11 5 3 12 1 3 13 0 3 14 4 3 15 0 1 16 2 1 17 6 1 18 4 1 19 3 4 20 1 4 21 16 4 22 17 4 23 8 5 24 10 5 25 11 5 26 9 5 27 8 6 28 3 6 29 12 6 30 14 6 31 2 7 32 3 7 33 8 7 34 9 7 35 7 2 36 6 2 37 11 2 38 10 2 39 12 8 40 13 8 41 15 8 42 14 8 43 3 3 44 7 3 45 13 3 46 12 3 47 10 5 48 8 5 49 14 5 50 15 5 51 7 9 52 10 9 53 15 9 54 13 9 55 19 10 56 18 10 57 22 10 58 23 10 59 1 3 60 5 3 61 19 3 62 16 3 63 7 5 64 3 5 65 17 5 66 18 5 67 5 8 68 7 8 69 18 8 70 19 8 71 23 8 72 22 8 73 21 8 74 20 8 75 17 11 76 16 11 77 20 11 78 21 11 79 16 12 80 19 12 81 23 12 82 20 12 83 18 13 84 17 13 85 21 13 86 22 13 87</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Houses_003_mesh" name="Houses_003_mesh" type="NODE">
+        <matrix sid="transform">1 5.68434e-14 -5.68434e-14 0 -5.68434e-14 -4.37114e-8 -1 0 0 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Houses_003_mesh-mesh" name="Houses_003_mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="World-material" target="#World-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

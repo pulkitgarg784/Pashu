@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2016-07-14T22:21:16</created>
+    <modified>2016-07-14T22:21:16</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Road-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Road-material" name="Road">
+      <instance_effect url="#Road-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Highway_Straight_3_mesh-mesh" name="Highway Straight 3_mesh">
+      <mesh>
+        <source id="Highway_Straight_3_mesh-mesh-positions">
+          <float_array id="Highway_Straight_3_mesh-mesh-positions-array" count="144">-1.49011e-7 12.5 -9.999994 7.45059e-7 12.5 7.083e-6 2.5 15 -9.999994 2.4 15.25 -9.999994 2.5 15.15 -9.999994 2.500001 15.15 6.74365e-6 2.400001 15.25 6.74822e-6 0.1000009 15.25 6.95385e-6 9.03011e-7 15.15 6.96717e-6 0 15.15 -9.999994 0.1 15.25 -9.999994 25 12.5 4.84783e-6 25 12.5 -9.999997 22.5 15 4.96207e-6 22.5 15 -9.999996 22.6 15.25 4.9422e-6 22.5 15.15 4.95551e-6 22.5 15.15 -9.999996 22.6 15.25 -9.999996 24.9 15.25 -9.999997 25 15.15 -9.999997 25 15.15 4.73199e-6 24.9 15.25 4.73656e-6 12.4 15 -9.999995 12.6 15 -9.999995 7.4 15 -9.999994 7.6 15 -9.999994 2.500001 15 6.75021e-6 12.4 15 5.86508e-6 7.6 15 -4.999993 7.400001 15 -4.999993 12.6 15 5.8472e-6 17.4 15 -9.999996 17.6 15 -9.999996 17.6 15 -4.999994 17.4 15 -4.999994 1.250001 15.25 6.85104e-6 1.25 15.25 -9.999994 23.75 15.25 -9.999996 23.75 15.25 4.83938e-6 0.1 16.25 -9.999994 0.1000009 16.25 6.91014e-6 1.250001 16.25 6.80733e-6 1.25 16.25 -9.999994 24.9 16.25 4.69285e-6 24.9 16.25 -9.999997 23.75 16.25 4.79567e-6 23.75 16.25 -9.999996</float_array>
+          <technique_common>
+            <accessor source="#Highway_Straight_3_mesh-mesh-positions-array" count="48" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Highway_Straight_3_mesh-mesh-normals">
+          <float_array id="Highway_Straight_3_mesh-mesh-normals-array" count="66">0 1 -1.65856e-7 0.7071028 0.7071108 0 0 1 -2.11928e-7 0 1 0 0 1 -2.38419e-7 1 0 0 -1 0 0 1 0 0 -0.7071081 0.7071055 0 0 1 0 -1 0 0 1 0 0 0.7071088 0.7071048 -1.2644e-7 0 1 0 -0.7071081 0.7071055 0 0 1 -3.02154e-7 0 1 0 0 1 -2.07603e-7 0 -1 0 -1 0 0 -1 1.52588e-6 0 1 -3.05176e-6 0</float_array>
+          <technique_common>
+            <accessor source="#Highway_Straight_3_mesh-mesh-normals-array" count="22" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Highway_Straight_3_mesh-mesh-map-0">
+          <float_array id="Highway_Straight_3_mesh-mesh-map-0-array" count="208">0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.8751475 0.861285 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.1093505 0.8953893 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.3852854 0.8705862 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877 0.6240157 0.8829877</float_array>
+          <technique_common>
+            <accessor source="#Highway_Straight_3_mesh-mesh-map-0-array" count="104" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Highway_Straight_3_mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Highway_Straight_3_mesh-mesh-positions"/>
+        </vertices>
+        <polylist material="Road-material" count="26">
+          <input semantic="VERTEX" source="#Highway_Straight_3_mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Highway_Straight_3_mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Highway_Straight_3_mesh-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 </vcount>
+          <p>36 0 0 6 0 1 3 0 2 37 0 3 21 1 4 20 1 5 19 1 6 22 1 7 31 2 8 35 2 9 32 2 10 24 2 11 29 3 12 26 3 13 25 3 14 30 3 15 34 4 16 33 4 17 32 4 18 35 4 19 36 5 20 37 5 21 43 5 22 42 5 23 0 6 24 1 6 25 8 6 26 9 6 27 27 7 28 2 7 29 4 7 30 5 7 31 9 8 32 8 8 33 7 8 34 10 8 35 38 9 36 18 9 37 15 9 38 39 9 39 14 10 40 13 10 41 16 10 42 17 10 43 12 11 44 20 11 45 21 11 46 11 11 47 5 12 48 4 12 49 3 12 50 6 12 51 27 13 52 30 13 53 25 13 54 2 13 55 15 14 56 18 14 57 17 14 58 16 14 59 29 9 60 28 9 61 23 9 62 26 9 63 28 15 64 29 15 65 30 15 66 27 15 67 31 16 68 24 16 69 23 16 70 28 16 71 13 9 72 34 9 73 35 9 74 31 9 75 34 17 76 13 17 77 14 17 78 33 17 79 0 18 80 12 18 81 11 18 82 1 18 83 10 19 84 7 19 85 41 19 86 40 19 87 41 9 88 42 9 89 43 9 90 40 9 91 45 9 92 47 9 93 46 9 94 44 9 95 38 20 96 39 20 97 46 20 98 47 20 99 22 21 100 19 21 101 45 21 102 44 21 103</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Highway_Straight_3_mesh" name="Highway_Straight_3_mesh" type="NODE">
+        <matrix sid="transform">1 -5.96047e-8 -5.96047e-8 0 -7.10543e-15 -4.37114e-8 -1 0 5.96047e-8 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Highway_Straight_3_mesh-mesh" name="Highway_Straight_3_mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Road-material" target="#Road-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

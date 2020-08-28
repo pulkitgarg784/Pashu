@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class adoption : MonoBehaviour
 {
     private Stats stats;
+    public Text adoptionText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +32,17 @@ public class adoption : MonoBehaviour
                 int fees = Random.Range(50, 100) * stats.Level;
                 stats.Money += fees;
                 Debug.Log(animal.GetComponent<AnimalController>().animalName + " was adopted for: $" + fees.ToString());
+                StartCoroutine(setText(animal.GetComponent<AnimalController>().animalName + " was adopted for: $" + fees.ToString()));
                 UIManager.instance.UpdateValues();
                 Destroy(animal);
             }
         }
+    }
+
+    public IEnumerator setText(string str)
+    {
+        adoptionText.text = str;
+        yield return new WaitForSeconds(5);
+        adoptionText.text = "";
     }
 }

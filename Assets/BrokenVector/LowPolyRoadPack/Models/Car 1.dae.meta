@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 26e8d194fbf5bca409d8e2a931e7a028
+labels:
+- car
+- lowpoly
+- road
+- street
+timeCreated: 1468426737
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Car_1_Model
+    100004: Car_1_Wheel_1
+    100006: Car_1_Wheel_2
+    100008: Car_1_Wheel_3
+    100010: Car_1_Wheel_4
+    100012: Car_2
+    100014: Car_2_Model
+    100016: Car_2_Wheel_1
+    100018: Car_2_Wheel_2
+    100020: Car_2_Wheel_3
+    100022: Car_2_Wheel_4
+    100024: Tunnel_Straight_4
+    400000: //RootNode
+    400002: Car_1_Model
+    400004: Car_1_Wheel_1
+    400006: Car_1_Wheel_2
+    400008: Car_1_Wheel_3
+    400010: Car_1_Wheel_4
+    400012: Car_2
+    400014: Car_2_Model
+    400016: Car_2_Wheel_1
+    400018: Car_2_Wheel_2
+    400020: Car_2_Wheel_3
+    400022: Car_2_Wheel_4
+    400024: Tunnel_Straight_4
+    2300000: //RootNode
+    2300002: Car_1_Model
+    2300004: Car_1_Wheel_1
+    2300006: Car_1_Wheel_2
+    2300008: Car_1_Wheel_3
+    2300010: Car_1_Wheel_4
+    2300012: Car_2_Model
+    2300014: Car_2_Wheel_1
+    2300016: Car_2_Wheel_2
+    2300018: Car_2_Wheel_3
+    2300020: Car_2_Wheel_4
+    3300000: //RootNode
+    3300002: Car_1_Model
+    3300004: Car_1_Wheel_1
+    3300006: Car_1_Wheel_2
+    3300008: Car_1_Wheel_3
+    3300010: Car_1_Wheel_4
+    3300012: Car_2_Model
+    3300014: Car_2_Wheel_1
+    3300016: Car_2_Wheel_2
+    3300018: Car_2_Wheel_3
+    3300020: Car_2_Wheel_4
+    4300000: Car_1_mesh
+    4300002: Car_1_Model
+    4300004: Car_1_Wheel_1
+    4300006: Car_1_Wheel_2
+    4300008: Car_1_Wheel_3
+    4300010: Car_1_Wheel_4
+    4300012: Car_2_Model
+    4300014: Car_2_Wheel_1
+    4300016: Car_2_Wheel_2
+    4300018: Car_2_Wheel_3
+    4300020: Car_2_Wheel_4
+    6400000: //RootNode
+    6400002: Car_1_Model
+    6400004: Car_1_Wheel_1
+    6400006: Car_1_Wheel_2
+    6400008: Car_1_Wheel_3
+    6400010: Car_1_Wheel_4
+    6400012: Car_2_Model
+    6400014: Car_2_Wheel_1
+    6400016: Car_2_Wheel_2
+    6400018: Car_2_Wheel_3
+    6400020: Car_2_Wheel_4
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
