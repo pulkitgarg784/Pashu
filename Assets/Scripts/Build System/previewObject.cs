@@ -9,6 +9,7 @@ public class previewObject : MonoBehaviour
 
     public Material goodMat;
     public Material badMat;
+
     public GameObject prefab;
 
     public MeshRenderer myRend;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class AnimalController : MonoBehaviour
 {
     private Stats stats;
@@ -38,6 +39,7 @@ public class AnimalController : MonoBehaviour
     [Header("Indicators:")]
     public GameObject foodIndicator;
     public GameObject waterIndicator;
+    public Text deathText;
     bool isDead;
 
     //Name and age
@@ -65,6 +67,7 @@ public class AnimalController : MonoBehaviour
         UIManager.instance.UpdateValues();
         foodIndicator.SetActive(false);
         waterIndicator.SetActive(false);
+        deathText = GameObject.Find("DeathText").GetComponent<Text>();
 
     }
 
@@ -88,7 +91,11 @@ public class AnimalController : MonoBehaviour
             animalAge = Random.Range(1, 10);
         }
     }
+    private void OnDestroy()
+    {
+        deathText.text = "";
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -105,6 +112,7 @@ public class AnimalController : MonoBehaviour
                 health = 0;
                 water = 0;
                 Debug.Log(transform.name + " died");
+                deathText.text = "Your " + animalType + " " + animalName + " died";
                 animator.SetBool("isSleeping", true);
                 agent.enabled = false;
             }
