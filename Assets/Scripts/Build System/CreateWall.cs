@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 public class CreateWall : MonoBehaviour
 {
     Stats stats;
@@ -12,12 +12,23 @@ public class CreateWall : MonoBehaviour
     public GameObject wall;
     GameObject lastpole;
     cameraController _cameraController;
+    public Text controls;
 
     int WallIndex;
     GameObject wallParent;
     public GameObject Walls;
     public float cost = 10;
     // Start is called before the first frame update
+
+    private void OnEnable()
+    {
+        controls.text = "Drag LMB to build walls, Press RMB to stop";
+    }
+    private void OnDisable()
+    {
+        controls.text = "";
+
+    }
     void Start()
     {
         buildPosition = GetComponent<ShowBuildPosition>();

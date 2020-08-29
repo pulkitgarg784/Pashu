@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class previewObject : MonoBehaviour
 {
@@ -17,7 +18,17 @@ public class previewObject : MonoBehaviour
     public bool snapToGrid;
     public float cost;
     private Stats stats;
+    public Text control;
 
+    private void OnEnable()
+    {
+        control = GameObject.Find("Controls").GetComponent<Text>();
+        control.text = "LMB to place object, RMB to cancel, R to rotate.";
+    }
+    private void OnDisable()
+    {
+        control.text = "";
+    }
 
     private void Start()
     {
