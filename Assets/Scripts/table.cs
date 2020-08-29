@@ -71,7 +71,7 @@ public class table : MonoBehaviour
             {
                 GameObject foodObj = Instantiate(food, foodSpawnPoints[i].position, Quaternion.identity, foodSpawnPoints[i]);
                 stats.Money -= itemCost;
-                foodObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                foodObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
             }
         }
         for (int i = 0; i < waterSpawnPoints.Length; i++)

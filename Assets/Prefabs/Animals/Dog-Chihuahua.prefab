@@ -1182,7 +1182,7 @@ Transform:
   m_GameObject: {fileID: 7423391666935386539}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 7423391666934959533}
   - {fileID: 7423391666934959537}
@@ -1261,6 +1261,7 @@ MonoBehaviour:
   healthReductionSpeed: 2
   foodIndicator: {fileID: 650914220816495613}
   waterIndicator: {fileID: 9076713553179812203}
+  deathText: {fileID: 0}
   animalName: 
   animalAge: 0
 --- !u!65 &7423391666935386532
