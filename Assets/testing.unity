@@ -438,7 +438,7 @@ MeshRenderer:
   m_GameObject: {fileID: 138121263}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -4881,13 +4881,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582156889}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.1060651, y: -0.87730104, z: 0.40909216, w: 0.22745736}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -150.93, z: 0}
 --- !u!1001 &1638371800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6724,7 +6724,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 'A customizable boundary wall: $ 100'
+            m_StringArgument: A customizable boundary wall
             m_BoolArgument: 0
           m_CallState: 2
     onHoverExit:
@@ -6732,7 +6732,7 @@ MonoBehaviour:
         m_Calls: []
     order: 0
   - angle: 63.842857
-    sliceLabel: 1x1 Box
+    sliceLabel: Tree
     icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
@@ -6748,7 +6748,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 'Object: $100'
+            m_StringArgument: Object
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1656499010}
@@ -6777,7 +6777,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: A 1x1 Box
+            m_StringArgument: 'Trees make animals happy and make your world beautiful:
+              $50'
             m_BoolArgument: 0
           m_CallState: 2
     onHoverExit:
@@ -6808,7 +6809,7 @@ MonoBehaviour:
           m_MethodName: StartBuild
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1078152998164085450, guid: 60f83cbbfa17be0419a9fa01a2d60e71,
+            m_ObjectArgument: {fileID: 1669664403603549115, guid: e02c88c293dff134ea5ee59bd5e46663,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
@@ -6830,7 +6831,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 'Food for the animals: $10'
+            m_StringArgument: 'Food for the animals: $20'
             m_BoolArgument: 0
           m_CallState: 2
     onHoverExit:
@@ -6861,7 +6862,7 @@ MonoBehaviour:
           m_MethodName: StartBuild
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1078152998164085450, guid: 25123e68330d0bf4693ec48c086025d3,
+            m_ObjectArgument: {fileID: 2490339352497331051, guid: 35447a12da0dbf24ba64597b3aeeb973,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
@@ -6883,7 +6884,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 'Water for the animals: $10'
+            m_StringArgument: 'Water for the animals: $20'
             m_BoolArgument: 0
           m_CallState: 2
     onHoverExit:

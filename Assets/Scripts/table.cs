@@ -20,7 +20,7 @@ public class table : MonoBehaviour
             if (foodSpawnPoints[i].childCount == 0)
             {
                 GameObject foodObj = Instantiate(food, foodSpawnPoints[i].position, Quaternion.identity, foodSpawnPoints[i]);
-                foodObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                foodObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
             }
         }
         for (int i = 0; i < waterSpawnPoints.Length; i++)
@@ -28,7 +28,7 @@ public class table : MonoBehaviour
             if (waterSpawnPoints[i].childCount == 0)
             {
                 GameObject waterObj = Instantiate(water, waterSpawnPoints[i].position, Quaternion.identity, waterSpawnPoints[i]);
-                waterObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                waterObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
             }
         }
     }

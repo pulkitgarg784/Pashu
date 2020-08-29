@@ -128,4 +128,4 @@ MonoBehaviour:
   prefab: {fileID: 956363603367750997, guid: b63f6687b08a2064b8b547ebe364785c, type: 3}
   myRend: {fileID: 1078152998164085448}
   snapToGrid: 1
-  cost: 100
+  cost: 50

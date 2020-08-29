@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1967244272384359422, guid: f4bc03f16a6eb1144be00733960df31c, type: 3}
+  - {fileID: 2100000, guid: 9b31667bc34f84b49903b85c1b90e10f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,10 +133,10 @@ MonoBehaviour:
   waterSpawnPoints:
   - {fileID: 4462995445281853830}
   - {fileID: 2565682497093873015}
-  food: {fileID: 956363603367750997, guid: d01e6c4f269e9ed4faa14fa1d3364c8c, type: 3}
-  water: {fileID: 956363603367750997, guid: c728a71481221a64f958006c85ff566a, type: 3}
+  food: {fileID: 531946466536776221, guid: 468ded8551632774ebad4ea03563444b, type: 3}
+  water: {fileID: 2100081924097483897, guid: 3ac57f299f5ffcd41a8e0b2e18c8b017, type: 3}
   isOccupied: 0
-  itemCost: 50
+  itemCost: 20
 --- !u!1 &853758406000296192
 GameObject:
   m_ObjectHideFlags: 0
