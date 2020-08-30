@@ -9812,7 +9812,7 @@ MonoBehaviour:
   closeTransition: 0
   dynamicallyScaleToResolution: 1
   defaultResolution: {x: 1920, y: 1080}
-  textVerticalOffset: -30
+  textVerticalOffset: -15
   useController: 1
   joystickButton: 0
   joystickInput: {x: 0, y: 0}
@@ -9825,7 +9825,7 @@ MonoBehaviour:
   piData:
   - angle: 40.785713
     sliceLabel: Wall
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: 16effe726276c414c9add00255d5dcd7, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
@@ -9866,7 +9866,7 @@ MonoBehaviour:
     order: 0
   - angle: 63.842857
     sliceLabel: Tree
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: e3db8f5bb411db842ae866df9ec2341d, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
@@ -9920,7 +9920,7 @@ MonoBehaviour:
     order: 1
   - angle: 63.842857
     sliceLabel: Food
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: 06f672b2235a22f4dab1083e8a587951, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
@@ -9973,7 +9973,7 @@ MonoBehaviour:
     order: 2
   - angle: 63.842854
     sliceLabel: Water
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: cda62809135c60e42a213b54867fc6d1, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
@@ -10026,7 +10026,7 @@ MonoBehaviour:
     order: 3
   - angle: 63.842857
     sliceLabel: Table
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: 2ad4fc2914c109b48abfde00b9c16162, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}
@@ -10080,7 +10080,7 @@ MonoBehaviour:
     order: 4
   - angle: 63.842865
     sliceLabel: Helper
-    icon: {fileID: 21300000, guid: ca34d7eb0cdd548478e4eb6ad3775901, type: 3}
+    icon: {fileID: 21300000, guid: cd81372bae2929c4ab31dc2bd4433ab2, type: 3}
     nonHighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     highlightedColor: {r: 1, g: 0.5999999, b: 0, a: 1}
     disabledColor: {r: 0.19215688, g: 0.18823531, b: 0.18823531, a: 1}

@@ -58,7 +58,6 @@ public class TimeManager : MonoBehaviour
     }
     void convertDaytoDate()
     {
-
         int year = DateTime.Now.Year; //Or any year you want
         theDate = new DateTime(year, 1, 1).AddDays(dayOfYear - 1);
         UIManager.instance.setDayMonth(theDate.Day.ToString(), CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(theDate.Month).ToUpper());
