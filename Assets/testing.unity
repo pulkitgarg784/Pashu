@@ -8164,7 +8164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414bc0c9e6ee4dc42925d846b16f5ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 1000
+  Money: 3000
   XP: 0
   Level: 0
   animalCount: 0

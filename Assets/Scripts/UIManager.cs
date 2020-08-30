@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         stats = GetComponent<Stats>();
+        UpdateValues();
+
     }
 
     // Update is called once per frame

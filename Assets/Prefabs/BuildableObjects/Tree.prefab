@@ -127,4 +127,4 @@ MonoBehaviour:
   - {fileID: 4300000, guid: 6c7eaede4efc960409fb9ef2dfb77f29, type: 3}
   - {fileID: 4300000, guid: 4471b1f7f824e4d44887e1364c6fc61a, type: 3}
   - {fileID: 4300000, guid: 69f0af3a0a6c73b4ab4b89eb82cdc488, type: 3}
-  HappinessIncrease: 15
+  HappinessIncrease: 30

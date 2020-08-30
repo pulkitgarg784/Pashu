@@ -80,7 +80,7 @@ public class table : MonoBehaviour
             {
                 GameObject waterObj = Instantiate(water, waterSpawnPoints[i].position, Quaternion.identity, waterSpawnPoints[i]);
                 stats.Money -= itemCost;
-                waterObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                waterObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
             }
         }
         man.busy = false;
