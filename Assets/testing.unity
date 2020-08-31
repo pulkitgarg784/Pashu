@@ -3072,7 +3072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617590858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.424366, y: -20.275944, z: -23.749996}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10548,6 +10548,7 @@ MonoBehaviour:
   - {fileID: 5986183953514631221, guid: 14d887275ac803b4ba25ec60d9322693, type: 3}
   - {fileID: 9021828738234821118, guid: 315eb25db05b98f488e8cd5a1f621360, type: 3}
   - {fileID: 7532941165870017358, guid: 49fcd2a7f76a75f408e17ee5b37a2b34, type: 3}
+  - {fileID: 5180066175363161908, guid: 7a774bb848e574c41aa4f57cc7073353, type: 3}
   spawnPt: {fileID: 555998789}
   animalParent: {fileID: 1771794531}
   animation: {fileID: 3017000547408674622}
