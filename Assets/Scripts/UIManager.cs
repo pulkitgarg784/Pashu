@@ -29,8 +29,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     public void UpdateValues()
     {
-        moneyText.text = stats.Money.ToString();
-        levelText.text = stats.Level.ToString();
+        moneyText.text = "$ " + stats.Money.ToString();
+        levelText.text = "Level: " + stats.Level.ToString();
         xpSlider.value = stats.XP;
         animalText.text = "Animals: " + stats.animalCount.ToString();
         happinessText.text = "Happiness: " + stats.happinessIndex().ToString() + "%";
